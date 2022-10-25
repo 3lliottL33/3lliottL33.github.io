@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html lang="en">
+
+  <header>
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="FaviconIcon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width-device-width, initial-scale=1, shrink-to-fit=0">
+    <meta name="name" content="Elliott Lee's Portal">
+ <!-- remove after -->
+    <script type="text/javascript" src="myScript.js"></script>
+    <meta name="referrer" content="origin">
+    <style>
+    .myDiv {
+      border: 5px outset #967E76;
+      background-color: #EEE3CB;
+      text-align: center;
+      width: 40%;
+      margin: auto;
+    }
+    .userMessage {
+      margin: 1px;
+      padding: 1px;
+      width: 500px;
+      height: 300px;
+      resize: none;
+    }
+    </style>
+    <script>
+/*    function validate() {
+
+      if( document.contForm.fname.value ==""){
+        alert("First name must be filled out");
+        document.contForm.fname.focus();
+        return false;
+      }
+
+      if( document.contForm.Email.value ==""){
+        alert("Email must be filled out");
+        document.contForm.Email.focus();
+        return false;
+      }
+    }*/
+    </script>
+  </header>
+
+
+  <body>
+    <div class="myDiv">
+      <h1><font size="+15">Contact Me</font></h1>
+    </div>
+    <form action="https://formspree.io/f/mpznyqrv" method="POST"
+          onsubmit="return validate()">
+      <br><br>
+
+
+      <div>
+        <input type="text" id="fname" name="Full Name" placeholder="Full Name" style="height:50px;font-size:18px;" required>
+      </div>
+      <br><br>
+
+
+      <input type="email" id="email" name="Email" placeholder="email..." style="width:500px;height:50px;font-size:18px;" required>
+      <br><br>
+
+
+      <textarea name="Message" class="userMessage" placeholder="Message..."></textarea>
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+
+  <footer>
+  <hr>
+  <p><a href="index.html">Back to my website</a><p>
+  </footer>
+</html>
