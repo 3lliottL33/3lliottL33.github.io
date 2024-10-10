@@ -173,6 +173,10 @@
     animation-duration: 1.5s;
   }
 
+  .center {
+    text-align: center;
+  }
+
   @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
