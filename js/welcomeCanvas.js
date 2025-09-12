@@ -41,21 +41,21 @@ const verticesRel = {
         {x: 325/designWidth, y: 50/designHeight}
     ],
     L: [
-        {x: 500/designWidth, y: 50/designHeight},
-        {x: 500/designWidth, y: 250/designHeight},
-        {x: 650/designWidth, y: 250/designHeight},
-        {x: 650/designWidth, y: 200/designHeight},
-        {x: 575/designWidth, y: 200/designHeight},
-        {x: 575/designWidth, y: 50/designHeight},
-        {x: 500/designWidth, y: 50/designHeight}
+        {x: 515/designWidth, y: 50/designHeight},
+        {x: 515/designWidth, y: 250/designHeight},
+        {x: 665/designWidth, y: 250/designHeight},
+        {x: 665/designWidth, y: 200/designHeight},
+        {x: 570/designWidth, y: 200/designHeight},
+        {x: 570/designWidth, y: 50/designHeight},
+        {x: 515/designWidth, y: 50/designHeight}
     ],
     C: [
         {x: 700/designWidth, y: 50/designHeight},
         {x: 700/designWidth, y: 250/designHeight},
         {x: 850/designWidth, y: 250/designHeight},
         {x: 850/designWidth, y: 200/designHeight},
-        {x: 775/designWidth, y: 200/designHeight},
-        {x: 775/designWidth, y: 100/designHeight},
+        {x: 750/designWidth, y: 200/designHeight},
+        {x: 750/designWidth, y: 100/designHeight},
         {x: 850/designWidth, y: 100/designHeight},
         {x: 850/designWidth, y: 50/designHeight},
         {x: 700/designWidth, y: 50/designHeight}
@@ -108,7 +108,7 @@ const verticesRel = {
 };
 
 
-
+// Scales the vertices so that the canvas is compatible with different screen sizes
 function getScaledVertices(og_vertices) {
     const scaled = {};
     for (const key in og_vertices) {
@@ -131,6 +131,8 @@ canvas.addEventListener('mousemove', (event) => {
     mouse.y = event.clientY - rect.top;
 });
 
+
+// Connects the vertices with lines to create the letters
 function connectVertices(points) {
     if (points.length === 0) return;
     ctx.beginPath();
@@ -143,6 +145,7 @@ function connectVertices(points) {
     ctx.stroke();
 }
 
+// Connects the vertices with the cursor if close enough
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     vertices = getScaledVertices(verticesRel);
