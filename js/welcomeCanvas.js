@@ -3,116 +3,125 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = 300;
 
-const vertices = {
+
+const designWidth = 1600;
+const designHeight = 300;
+
+const verticesRel = {
     W: [
-        {x: 50, y: 50},
-        {x: 100, y: 250},
-        {x: 150, y: 250},
-        {x: 175, y: 100},
-        {x: 200, y: 250},
-        {x: 250, y: 250},
-        {x: 300, y: 50},
-        {x: 250, y: 50},
-        {x: 225, y: 200},
-        {x: 200, y: 50},
-        {x: 150, y: 50},
-        {x: 125, y: 200},
-        {x: 100, y: 50},
-        {x: 50, y: 50},
-        {x: 100, y: 250}
+        {x: 50/designWidth, y: 50/designHeight},
+        {x: 100/designWidth, y: 250/designHeight},
+        {x: 150/designWidth, y: 250/designHeight},
+        {x: 175/designWidth, y: 100/designHeight},
+        {x: 200/designWidth, y: 250/designHeight},
+        {x: 250/designWidth, y: 250/designHeight},
+        {x: 300/designWidth, y: 50/designHeight},
+        {x: 250/designWidth, y: 50/designHeight},
+        {x: 225/designWidth, y: 200/designHeight},
+        {x: 200/designWidth, y: 50/designHeight},
+        {x: 150/designWidth, y: 50/designHeight},
+        {x: 125/designWidth, y: 200/designHeight},
+        {x: 100/designWidth, y: 50/designHeight},
+        {x: 50/designWidth, y: 50/designHeight},
+        {x: 100/designWidth, y: 250/designHeight},
     ],
     E: [
-        {x: 325, y: 50},
-        {x: 325, y: 250},
-        {x: 475, y: 250},
-        {x: 475, y: 200},
-        {x: 375, y: 200},
-        {x: 375, y: 170},
-        {x: 475, y: 170},
-        {x: 475, y: 130},
-        {x: 375, y: 130},
-        {x: 375, y: 100},
-        {x: 475, y: 100},
-        {x: 475, y: 50},
-        {x: 325, y: 50}
+        {x: 325/designWidth, y: 50/designHeight},
+        {x: 325/designWidth, y: 250/designHeight},
+        {x: 475/designWidth, y: 250/designHeight},
+        {x: 475/designWidth, y: 200/designHeight},
+        {x: 375/designWidth, y: 200/designHeight},
+        {x: 375/designWidth, y: 170/designHeight},
+        {x: 475/designWidth, y: 170/designHeight},
+        {x: 475/designWidth, y: 130/designHeight},
+        {x: 375/designWidth, y: 130/designHeight},
+        {x: 375/designWidth, y: 100/designHeight},
+        {x: 475/designWidth, y: 100/designHeight},
+        {x: 475/designWidth, y: 50/designHeight},
+        {x: 325/designWidth, y: 50/designHeight}
     ],
     L: [
-        {x: 525, y: 50},
-        {x: 525, y: 250},
-        {x: 675, y: 250},
-        {x: 675, y: 200},
-        {x: 575, y: 200},
-        {x: 575, y: 50},
-        {x: 525, y: 50}
+        {x: 500/designWidth, y: 50/designHeight},
+        {x: 500/designWidth, y: 250/designHeight},
+        {x: 650/designWidth, y: 250/designHeight},
+        {x: 650/designWidth, y: 200/designHeight},
+        {x: 575/designWidth, y: 200/designHeight},
+        {x: 575/designWidth, y: 50/designHeight},
+        {x: 500/designWidth, y: 50/designHeight}
     ],
     C: [
-        {x: 725, y: 50},
-        {x: 725, y: 250},
-        {x: 875, y: 250},
-        {x: 875, y: 200},
-        {x: 775, y: 200},
-        {x: 775, y: 100},
-        {x: 875, y: 100},
-        {x: 875, y: 50},
-        {x: 725, y: 50}
+        {x: 700/designWidth, y: 50/designHeight},
+        {x: 700/designWidth, y: 250/designHeight},
+        {x: 850/designWidth, y: 250/designHeight},
+        {x: 850/designWidth, y: 200/designHeight},
+        {x: 775/designWidth, y: 200/designHeight},
+        {x: 775/designWidth, y: 100/designHeight},
+        {x: 850/designWidth, y: 100/designHeight},
+        {x: 850/designWidth, y: 50/designHeight},
+        {x: 700/designWidth, y: 50/designHeight}
     ],
     O: [
-        {x: 925, y: 50},
-        {x: 925, y: 250},
-        {x: 1075, y: 250},
-        {x: 1075, y: 50},
-        {x: 925, y: 50}
+        {x: 900/designWidth, y: 50/designHeight},
+        {x: 900/designWidth, y: 250/designHeight},
+        {x: 1050/designWidth, y: 250/designHeight},
+        {x: 1050/designWidth, y: 50/designHeight},
+        {x: 900/designWidth, y: 50/designHeight}
     ],
     O_in: [
-        {x: 975, y: 200},
-        {x: 975, y: 100},
-        {x: 1025, y: 100},
-        {x: 1025, y: 200},
-        {x: 975, y: 200}
+        {x: 950/designWidth, y: 200/designHeight},
+        {x: 950/designWidth, y: 100/designHeight},
+        {x: 1000/designWidth, y: 100/designHeight},
+        {x: 1000/designWidth, y: 200/designHeight},
+        {x: 950/designWidth, y: 200/designHeight}
     ],
     M: [
-        {x: 1100, y: 50},
-        {x: 1100, y: 250},
-        {x: 1150, y: 250},
-        {x: 1150, y: 100},
-        {x: 1175, y: 250},
-        {x: 1225, y: 250},
-        {x: 1250, y: 100},
-        {x: 1250, y: 250},
-        {x: 1300, y: 250},
-        {x: 1300, y: 50},
-        {x: 1225, y: 50},
-        {x: 1200, y: 175},
-        {x: 1175, y: 50},
-        {x: 1100, y: 50}
+        {x: 1100/designWidth, y: 50/designHeight},
+        {x: 1100/designWidth, y: 250/designHeight},
+        {x: 1150/designWidth, y: 250/designHeight},
+        {x: 1150/designWidth, y: 100/designHeight},
+        {x: 1175/designWidth, y: 250/designHeight},
+        {x: 1225/designWidth, y: 250/designHeight},
+        {x: 1250/designWidth, y: 100/designHeight},
+        {x: 1250/designWidth, y: 250/designHeight},
+        {x: 1300/designWidth, y: 250/designHeight},
+        {x: 1300/designWidth, y: 50/designHeight},
+        {x: 1225/designWidth, y: 50/designHeight},
+        {x: 1200/designWidth, y: 175/designHeight},
+        {x: 1175/designWidth, y: 50/designHeight},
+        {x: 1100/designWidth, y: 50/designHeight} 
     ],
     second_E: [
-        {x: 1325, y: 50},
-        {x: 1325, y: 250},
-        {x: 1475, y: 250},
-        {x: 1475, y: 200},
-        {x: 1375, y: 200},
-        {x: 1375, y: 170},
-        {x: 1475, y: 170},
-        {x: 1475, y: 130},
-        {x: 1375, y: 130},
-        {x: 1375, y: 100},
-        {x: 1475, y: 100},
-        {x: 1475, y: 50},
-        {x: 1325, y: 50}
+        {x: 1325/designWidth, y: 50/designHeight},
+        {x: 1325/designWidth, y: 250/designHeight},
+        {x: 1475/designWidth, y: 250/designHeight},
+        {x: 1475/designWidth, y: 200/designHeight},
+        {x: 1375/designWidth, y: 200/designHeight},
+        {x: 1375/designWidth, y: 170/designHeight},
+        {x: 1475/designWidth, y: 170/designHeight},
+        {x: 1475/designWidth, y: 130/designHeight},
+        {x: 1375/designWidth, y: 130/designHeight},
+        {x: 1375/designWidth, y: 100/designHeight},
+        {x: 1475/designWidth, y: 100/designHeight},
+        {x: 1475/designWidth, y: 50/designHeight},
+        {x: 1325/designWidth, y: 50/designHeight}
     ]
 };
 
 
-const w_vertices = [
 
-];
-// Add 100 random points inside the box
-/*for (let i = 0; i < 100; i++) {
-    const x = 50 + Math.random() * (canvas.width - 100); // 50 to canvas.width-50
-    const y = 50 + Math.random() * 200; // 50 to y value
-    vertices.push({x, y});
-}*/
+function getScaledVertices(og_vertices) {
+    const scaled = {};
+    for (const key in og_vertices) {
+        scaled[key] = og_vertices[key].map(p => ({
+            x: p.x * canvas.width,
+            y: p.y * canvas.height
+        }));
+    }
+    return scaled;
+}
+
+let vertices = getScaledVertices(verticesRel);
+
 
 const mouse = {x: 0, y: 0}
 
@@ -136,7 +145,7 @@ function connectVertices(points) {
 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+    vertices = getScaledVertices(verticesRel);
     for(const key in vertices) {
         connectVertices(vertices[key]);
     }
