@@ -3,7 +3,7 @@
 body {
     background-color: rgb(19, 19, 43);
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
     display: flex;
@@ -26,7 +26,7 @@ header {
     top: 0;                    
     left: 0;                   
     width: 100%;     
-    height: 230px;         
+    height: 170px;         
     border-bottom: 2px solid white;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -42,15 +42,17 @@ html, body {
 }
 
 section {
+    padding-top: 150px;
+    margin-top: -150px;
     padding-bottom: 50px;
 }
 html {
-  scroll-behavior: smooth; /* smooth scroll when clicking nav links */
+  scroll-behavior: smooth; 
 }
 
 main {
     flex: 1;
-    margin-top: 230px;
+    margin-top: 170px;
 }
 
 /* TEXT STYLES */
@@ -59,17 +61,31 @@ h1 {
     font-size: 40px;
     padding-top: 20px;
     padding-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
 }
 h2 {
-    text-align: center;
+    text-align:left; 
+    margin-left:70px; 
+    margin-right:70px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 p {
     text-align: left;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
+a {
+    color: rgb(2, 255, 171);
+    text-decoration: underline;
+}
+
+/* IMG  STYLES */
+img {
+    border-radius: 20px;
+}
 
 #welcomeCanvas {
     display: block;
@@ -143,4 +159,8 @@ nav li a.active {
 
 nav li a:hover:not(.active) {
     border-bottom: 2px solid white;
+}
+
+nav {
+    margin-top: -60px;
 }

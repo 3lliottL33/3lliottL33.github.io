@@ -158,7 +158,7 @@ function animate() {
             ctx.fillStyle = 'white';
             ctx.beginPath();
             ctx.arc(vertex.x, vertex.y, 3, 0, Math.PI * 2);
-            ctx.fill();
+            //ctx.fill();
 
             // draw line to mouse if close
             const dx = vertex.x - mouse.x;
