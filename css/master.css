@@ -1,7 +1,7 @@
 /* CSS Document */
 
 body {
-    background-color:black;
+    background-color: rgb(19, 19, 43);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -22,11 +22,16 @@ footer {
 }
 
 header {
+    position: fixed;          
+    top: 0;                    
+    left: 0;                   
+    width: 100%;               
     border-bottom: 2px solid white;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     padding-left: 20px;
     padding-right: 20px;
+    background-color: black;     
 }
 
 html, body {
@@ -35,26 +40,42 @@ html, body {
     padding: 0;
 }
 
-main {
-    flex: 1;
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+html {
+  scroll-behavior: smooth; /* smooth scroll when clicking nav links */
 }
 
+main {
+    flex: 1;
+    padding-top: 230px;
+}
+
+/* TEXT STYLES */
+h1 {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
 h2 {
     text-align: center;
-    padding: 50px;
 }
 
 p {
-    text-align: center;
+    text-align: left;
     padding-left: 60px;
     padding-right: 60px;
 }
+
 
 #welcomeCanvas {
     display: block;
     width: 100%;
     height: 300px;
-    background-color: black;
+    background-color: rgb(27, 27, 27);
 }
 
 /* Specific Styles (Classes) */
