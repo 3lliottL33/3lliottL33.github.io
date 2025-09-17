@@ -133,6 +133,40 @@ img {
     50% { transform: translate(10px); }
 }
 
+/* PROJECT CAROSEL DISPLAY */
+
+.project-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-display {
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.prev, .next {
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
 
 /* Navigation bar styles */
 
