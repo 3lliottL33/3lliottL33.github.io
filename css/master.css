@@ -144,13 +144,12 @@ img {
 
 .project-display {
     width: 600px;
-    height: 500px;
+    height: 400px;
     overflow: hidden;
     border-radius: 20px;
 }
 
 .prev, .next {
-    transform: translateY(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
